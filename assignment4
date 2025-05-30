@@ -1,0 +1,23 @@
+try:
+    file=open("sample.txt","r")
+    file_object=file.readlines()
+    for i in file_object:
+                print(i)
+except FileNotFoundError:
+    print("file not found")
+finally:
+    print("we have done task successfully")
+    file.close()
+
+input_=input("enter text to write to the file:")
+extra_input=input("enter additional text to append to file:")
+file=open("output.txt","r+")
+file_writer1=file.write(input_)
+print("data added successfully")
+file_writer2=file.write(extra_input)
+print("additional data added successfully")
+file_reader=file.readline()
+file.close()
+
+
+
